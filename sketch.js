@@ -1,4 +1,4 @@
-var fixedRect, movingRect;
+var fixedRect, movingRect, ob1;
 
 function setup() {
   createCanvas(1200,800);
@@ -8,6 +8,7 @@ function setup() {
   movingRect = createSprite(400,200,80,30);
   movingRect.shapeColor = "green";
   movingRect.debug = true;
+ob1 = createSprite(70, 400, 50, 80);
 }
 
 function draw() {
@@ -19,11 +20,11 @@ function draw() {
       && fixedRect.x - movingRect.x < fixedRect.width/2 + movingRect.width/2
       && movingRect.y - fixedRect.y < fixedRect.height/2 + movingRect.height/2
       && fixedRect.y - movingRect.y < fixedRect.height/2 + movingRect.height/2) {
-    movingRect.shapeColor = "red";
-    fixedRect.shapeColor = "red";
+    movingRect.shapeColor = "pink";
+    fixedRect.shapeColor = "pink";
   }
   else {
-    movingRect.shapeColor = "green";
+    movingRect.shapeColor = "blue";
     fixedRect.shapeColor = "green";
   }
   drawSprites();
